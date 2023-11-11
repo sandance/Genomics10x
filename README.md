@@ -22,10 +22,6 @@ Run the Application
 
 ```make run ```
 
-Test the application
-
-```make test```
-
 Clean the image
 
 ```make clean```
