@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  weatherapp:
+    build: . 
+    ports:
+      - "8080:8080"
+    networks:
+      - weatherapp_network
+
+  continuoustestapp:
+    build: ../continuoustestapp
+    networks:
+      - weatherapp_network
+    depends_on:
+      - weatherapp
+
+networks:
+  weatherapp_network:
+    driver: bridge
