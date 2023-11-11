@@ -30,4 +30,4 @@ Clean the image
 - Ensure Docker is running on your machine.
 - Use make build to build the Docker image.
 - Run the application with `make run`.
-- Access the application at http://localhost:8080.
+- Test app containerapptest will continuously hit weatherapp every 5 seconds
