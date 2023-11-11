@@ -1,6 +1,7 @@
-FROM ubuntu:latest
+FROM alpine:latest
 
-RUN apt-get update && apt-get install -y curl
+RUN apk update && apk add --no-cache curl
+RUN apk add --no-cache --upgrade bash
 
 WORKDIR /app
 
@@ -8,4 +9,4 @@ COPY continuous_test.sh /app/continuous_test.sh
 
 RUN chmod +x /app/continuous_test.sh
 
-CMD ["/bin/bash", "-c", "/app/continuous_test.sh"]
+CMD ["/bin/sh", "-c", "/app/continuous_test.sh"]
